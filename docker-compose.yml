@@ -1,0 +1,10 @@
+version: '3'
+services:
+  bun:
+    build: ./client
+    container_name: bun
+    ports:
+        - 3000:3000
+    volumes:
+        - ./client:/work
+    tty: true
