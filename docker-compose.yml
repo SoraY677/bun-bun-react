@@ -1,10 +1,15 @@
 version: '3'
+
 services:
   bun:
-    build: ./docker-bun
+    build:
+      context: .
     container_name: bun
     ports:
         - 3000:3000
     volumes:
         - ./client:/work
+    environment:
+      - HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true # ホットリロード
     tty: true

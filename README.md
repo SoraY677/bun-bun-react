@@ -9,21 +9,22 @@
 ### コマンド
 
 #### 起動
-
 ```bash
 # コンテナ起動
 docker-compose up -d
 # コンテナログイン
 docker-compose exec bun bash
+# パッケージインストール(初回のみ)
+bun install
 # 実行
-bun run index.ts
+bun run dev
 ```
 
 ### 停止・再起動
 
 ```bash
-# コンテナ再起動
-docker-compose restart
 # コンテナ停止
 docker-compose down
+# コンテナ再起動
+docker-compose restart
 ```
