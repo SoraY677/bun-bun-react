@@ -1,7 +1,7 @@
 version: '3'
 services:
   bun:
-    build: ./client
+    build: ./docker-bun
     container_name: bun
     ports:
         - 3000:3000
